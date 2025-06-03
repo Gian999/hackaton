@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>INFOTEL PERÚ - Tienda Online</title>
+  <link rel="stylesheet" href="css/styles.css">
+  <link rel="stylesheet" href="css/home.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+  <!-- Header -->
+  <header id="header"></header>
+
+  <!-- Main Content -->
+  <main class="container">
+    <section class="hero">
+      <div class="hero-content">
+        <h1>Artesanía y Moda Peruana</h1>
+        <p>Descubre nuestra exclusiva colección de productos artesanales y servicios personalizados</p>
+        <button class="btn-primary">Ver Catálogo</button>
+      </div>
+    </section>
+
+    <section class="filter-section">
+      <div class="search-container">
+        <input type="text" id="search-input" placeholder="Buscar productos...">
+        <button id="search-button"><i class="fas fa-search"></i></button>
+      </div>
+      
+      <div class="filters">
+        <div class="filter-group">
+          <label for="category-filter">Categoría</label>
+          <select id="category-filter">
+            <option value="todos">Todos</option>
+            <!-- Categories will be added dynamically -->
+          </select>
+        </div>
+
+        <div class="filter-group">
+          <label for="color-filter">Color</label>
+          <select id="color-filter">
+            <option value="todos">Todos</option>
+            <!-- Colors will be added dynamically -->
+          </select>
+        </div>
+
+        <div class="filter-group">
+          <label for="size-filter">Talla</label>
+          <select id="size-filter">
+            <option value="todos">Todos</option>
+            <!-- Sizes will be added dynamically -->
+          </select>
+        </div>
+      </div>
+    </section>
+
+    <section class="products-section">
+      <h2>Nuestros Productos</h2>
+      <div id="products-container" class="products-grid">
+        <!-- Products will be added dynamically -->
+      </div>
+    </section>
+
+    <section class="featured-section">
+      <h2>Categorías Destacadas</h2>
+      <div class="categories-grid">
+        <div class="category-card" data-category="ropa">
+          <img src="https://images.pexels.com/photos/6069552/pexels-photo-6069552.jpeg" alt="Ropa">
+          <h3>Ropa</h3>
+        </div>
+        <div class="category-card" data-category="accesorios">
+          <img src="https://images.pexels.com/photos/3738339/pexels-photo-3738339.jpeg" alt="Accesorios">
+          <h3>Accesorios</h3>
+        </div>
+        <div class="category-card" data-category="hogar">
+          <img src="https://images.pexels.com/photos/1248583/pexels-photo-1248583.jpeg" alt="Hogar">
+          <h3>Hogar</h3>
+        </div>
+        <div class="category-card" data-category="servicios">
+          <img src="https://images.pexels.com/photos/5691622/pexels-photo-5691622.jpeg" alt="Servicios">
+          <h3>Servicios</h3>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- Footer -->
+  <footer id="footer"></footer>
+
+
+  <!-- Product Modal -->
+  <div id="product-modal" class="modal">
+    <div class="modal-content">
+      <span class="close-modal">&times;</span>
+      <div id="modal-product-details"></div>
+    </div>
+  </div>
+
+  <script>
+(function(){if(!window.chatbase||window.chatbase("getState")!=="initialized"){window.chatbase=(...arguments)=>{if(!window.chatbase.q){window.chatbase.q=[]}window.chatbase.q.push(arguments)};window.chatbase=new Proxy(window.chatbase,{get(target,prop){if(prop==="q"){return target.q}return(...args)=>target(prop,...args)}})}const onLoad=function(){const script=document.createElement("script");script.src="https://www.chatbase.co/embed.min.js";script.id="AI2fNU8TYkvrsJ0no-iLh";script.domain="www.chatbase.co";document.body.appendChild(script)};if(document.readyState==="complete"){onLoad()}else{window.addEventListener("load",onLoad)}})();
+</script>
+  <!-- Toast Notification -->
+  <div id="toast" class="toast"></div>
+
+  <!-- Scripts -->
+  <script type="module" src="js/main.js"></script>
+  
+</body>
+</html>
